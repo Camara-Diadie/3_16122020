@@ -1,1 +1,114 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+
+header .logo figure {
+  background-image: url(/images/logo/ohmyfood.png);
+  height: 100px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+section#localisation-rest {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: #d0d3d4ef;
+}
+
+section#localisation-rest .localiter {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+section#localisation-rest .localiter p {
+  padding: 0;
+  margin: 0;
+  height: 3rem;
+  background-color: #9094977e;
+}
+
+section#localisation-rest .explore-rest {
+  width: 100%;
+  height: 10rem;
+}
+
+section#presentation {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+section#presentation h3 {
+  width: 100%;
+}
+
+section#presentation .carte-pres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #d0d3d4ef;
+  width: 20%;
+  border-radius: 10px;
+}
+
+section#presentation .carte-pres :nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-right: 260px;
+}
+
+section#presentation .carte-pres i {
+  margin-left: 30px;
+}
+
+section#presentation .carte-pres i:hover {
+  color: #9356DC;
+}
+/*# sourceMappingURL=style.css.map */
