@@ -2,7 +2,7 @@ $primaire:#9356DC;
 $secondaire:#FF79DA;
 $tertiaire:#99E2D0;
 $gris:#9094977e ;
-$gris-claire:#d0d3d4ef;
+$gris-claire:#a8a8a838;
 
 html{
      font-family: 'Roboto', sans-serif;
@@ -23,9 +23,11 @@ border: none;
     color: white;
     font-size: 20px;
 }
-// body{
+.container{
+    height: auto;
+    width: auto;
 
-// }
+}
 header{
     width: 100%;
     // background-color: #9356DC;
@@ -46,17 +48,18 @@ section#localisation-rest{
     padding: 0;
     margin: 0;
     background-color: $gris-claire;
+
+
     .localiter 
     {
         padding: 0;
         margin: 0;
         text-align: center;
         width: 100%;
-        p{
-            padding: 0;
+        background-color: $gris;
+        i{
+            padding:10px 0 10px 0;
             margin: 0;
-            height: 3rem;
-            background-color: $gris;
         }
     }
     .explore-rest{
@@ -78,6 +81,7 @@ section#presentation{
     text-align: center;
     padding: 0;
     margin: 0;
+    padding-bottom: 50px;
     h3{
         width: 100%;
     }
@@ -115,19 +119,19 @@ section#presentation{
 @mixin carte-restaurant{
     width: 40%;
     height: 400px;
-    background-color: red;
+    // background-color: red;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 @mixin img-carte-rest{
     height: 80%;
-    // width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;  
     border-radius: 20px 20px 0 0;
     position: relative;
 }
+
 section#restaurants{
     text-align: center;
     width: 100%;
@@ -136,30 +140,36 @@ section#restaurants{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    // align-content:space-around;
+    background-color: $gris-claire;
+    padding-bottom: 30px;
+
     h2{
         width: 100%;
+        padding-bottom: 30px;
     }
     .rest-palette, .rest-enchantee, .rest-française, .rest-delice{
+        background-color: white;
+        padding-bottom: 10px;
+
         @include carte-restaurant();
         .img-rest{
             @include img-carte-rest();
         }
-
-
-        .info-rest{
-            display: flex;
-            flex-wrap: wrap;
-        }
         .text-rest{
-            float: left;
-            text-align: center;
+        text-align: left;
+        padding: 0 10px 0 10px;
+        // background-color: white;
         }
-        div i{
-            float: right;
-            align-content: center;
-            justify-content: center;
-            color: green;
+        :nth-child(1)
+        {
+            font-size:large;
+            font-weight: bolder;
+        }
+         i{
+            float:right;
+            &:hover{
+               color: $primaire;
+            }
         }
     }
 
@@ -183,4 +193,18 @@ section#restaurants{
             background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
         }
     }
+}
+footer{
+    width: auto;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    position: relative;
+    // bottom: 0;
+    margin-bottom: 0;
+
+    padding-bottom: 0;
 }

@@ -10,6 +10,11 @@ button {
   border: none;
 }
 
+.container {
+  height: auto;
+  width: auto;
+}
+
 header {
   width: 100%;
 }
@@ -35,7 +40,7 @@ section#localisation-rest {
   text-align: center;
   padding: 0;
   margin: 0;
-  background-color: #d0d3d4ef;
+  background-color: #a8a8a838;
 }
 
 section#localisation-rest .localiter {
@@ -43,13 +48,12 @@ section#localisation-rest .localiter {
   margin: 0;
   text-align: center;
   width: 100%;
+  background-color: #9094977e;
 }
 
-section#localisation-rest .localiter p {
-  padding: 0;
+section#localisation-rest .localiter i {
+  padding: 10px 0 10px 0;
   margin: 0;
-  height: 3rem;
-  background-color: #9094977e;
 }
 
 section#localisation-rest .explore-rest {
@@ -82,6 +86,7 @@ section#presentation {
   text-align: center;
   padding: 0;
   margin: 0;
+  padding-bottom: 50px;
 }
 
 section#presentation h3 {
@@ -99,7 +104,7 @@ section#presentation .carte-pres {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: #d0d3d4ef;
+  background-color: #a8a8a838;
   width: 20%;
   border-radius: 20px;
 }
@@ -142,18 +147,22 @@ section#restaurants {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: #a8a8a838;
+  padding-bottom: 30px;
 }
 
 section#restaurants h2 {
   width: 100%;
+  padding-bottom: 30px;
 }
 
 section#restaurants .rest-palette, section#restaurants .rest-enchantee, section#restaurants .rest-française, section#restaurants .rest-delice {
+  background-color: white;
+  padding-bottom: 10px;
   width: 40%;
   height: 400px;
-  background-color: red;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 section#restaurants .rest-palette .img-rest, section#restaurants .rest-enchantee .img-rest, section#restaurants .rest-française .img-rest, section#restaurants .rest-delice .img-rest {
@@ -165,27 +174,22 @@ section#restaurants .rest-palette .img-rest, section#restaurants .rest-enchantee
   position: relative;
 }
 
-section#restaurants .rest-palette .info-rest, section#restaurants .rest-enchantee .info-rest, section#restaurants .rest-française .info-rest, section#restaurants .rest-delice .info-rest {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 section#restaurants .rest-palette .text-rest, section#restaurants .rest-enchantee .text-rest, section#restaurants .rest-française .text-rest, section#restaurants .rest-delice .text-rest {
-  float: left;
-  text-align: center;
+  text-align: left;
+  padding: 0 10px 0 10px;
 }
 
-section#restaurants .rest-palette div i, section#restaurants .rest-enchantee div i, section#restaurants .rest-française div i, section#restaurants .rest-delice div i {
+section#restaurants .rest-palette :nth-child(1), section#restaurants .rest-enchantee :nth-child(1), section#restaurants .rest-française :nth-child(1), section#restaurants .rest-delice :nth-child(1) {
+  font-size: large;
+  font-weight: bolder;
+}
+
+section#restaurants .rest-palette i, section#restaurants .rest-enchantee i, section#restaurants .rest-française i, section#restaurants .rest-delice i {
   float: right;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: green;
+}
+
+section#restaurants .rest-palette i:hover, section#restaurants .rest-enchantee i:hover, section#restaurants .rest-française i:hover, section#restaurants .rest-delice i:hover {
+  color: #9356DC;
 }
 
 section#restaurants .rest-palette .img-rest {
@@ -202,5 +206,22 @@ section#restaurants .rest-française .img-rest {
 
 section#restaurants .rest-delice .img-rest {
   background-image: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+footer {
+  width: auto;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #363636;
+  color: white;
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */
