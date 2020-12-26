@@ -3,6 +3,7 @@ $secondaire:#FF79DA;
 $tertiaire:#99E2D0;
 $gris:#9094977e ;
 $gris-claire:#a8a8a838;
+// fichier scss variable
 
 html{
      font-family: 'Roboto', sans-serif;
@@ -12,7 +13,9 @@ html{
 button { 
 background-color: green;
 border: none;
-
+    &:hover{
+    cursor: pointer;
+}
 }
 @mixin btn {
     background: linear-gradient($secondaire, $primaire);
@@ -48,8 +51,6 @@ section#localisation-rest{
     padding: 0;
     margin: 0;
     background-color: $gris-claire;
-
-
     .localiter 
     {
         padding: 0;
@@ -150,7 +151,6 @@ section#restaurants{
     .rest-palette, .rest-enchantee, .rest-française, .rest-delice{
         background-color: white;
         padding-bottom: 10px;
-
         @include carte-restaurant();
         .img-rest{
             @include img-carte-rest();
