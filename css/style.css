@@ -164,25 +164,26 @@ section#restaurants .rest-carde {
   padding-bottom: 10px;
   height: 80%;
   width: 40%;
-  height: 50%;
+  height: 400px;
   border-radius: 20px;
   margin-bottom: 100px;
 }
 
 section#restaurants .rest-carde .img-rest {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
+  width: auto;
+  height: 300px;
 }
 
 section#restaurants .rest-carde .img-rest img {
   width: 100%;
-  line-height-step: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
 section#restaurants .rest-carde .text-rest {
-  height: 20%;
+  height: 100px;
   text-align: left;
   padding: 0 10px 0 10px;
 }

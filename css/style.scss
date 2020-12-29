@@ -119,13 +119,11 @@ section#presentation{
 
 @mixin carte-restaurant{
     width: 40%;
-    height: 50%;
+    height: 400px;
     // background-color: red;
     border-radius: 20px;
     margin-bottom: 100px;
 }
-
-
 section#restaurants{
     text-align: center;
     width: 100%;
@@ -141,26 +139,26 @@ section#restaurants{
         width: 100%;
         padding-bottom: 30px;
     }
+
     .rest-carde{
         background-color: white;
         padding-bottom: 10px;
         height: 80%;
         @include carte-restaurant();
         .img-rest{
-            width: fit-content;
-            height:auto ;
+            width: auto;
+            height:300px ;
             img{
                 width: 100%;
-                line-height-step:auto ;
-
-
+                object-fit: cover;
+                height: 100%;
+                border-radius:20px 20px 0 0;
             }
         }
         .text-rest{
-        height: 20%;
+        height: 100px;
         text-align: left;
         padding: 0 10px 0 10px;
-        // background-color: white;
         }
         :nth-child(1)
         {
@@ -174,7 +172,6 @@ section#restaurants{
             }
         }
     }
-
 }
 footer{
     width: auto;
