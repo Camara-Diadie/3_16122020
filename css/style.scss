@@ -3,6 +3,7 @@ $secondaire:#FF79DA;
 $tertiaire:#99E2D0;
 $gris:#9094977e ;
 $gris-claire:#a8a8a838;
+
 // fichier scss variable
 
 html{
@@ -11,7 +12,6 @@ html{
      margin: 0;
 }
 button { 
-background-color: green;
 border: none;
     &:hover{
     cursor: pointer;
@@ -29,19 +29,20 @@ border: none;
 .container{
     height: auto;
     width: auto;
-
 }
 header{
     width: 100%;
     // background-color: #9356DC;
+    img{
+
+        height: auto;
+        width: auto;
+        display:block;
+        margin: 20px auto 20px auto;
+        background-repeat: no-repeat;  
+    }
 }
-header  .logo figure{
-    background-image: url(/images/logo/ohmyfood.png);
-    height: 100px;
-    width: 90%;
-    background-position: center;
-    background-repeat: no-repeat;  
-}
+
 section#localisation-rest{
     width: auto;
     height: auto;
@@ -86,7 +87,7 @@ section#presentation{
     h3{
         width: 100%;
     }
-    .carte-pres{
+        .carte-pres{
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
@@ -117,13 +118,8 @@ section#presentation{
     }
 }
 
-@mixin carte-restaurant{
-    width: 40%;
-    height: 400px;
-    // background-color: red;
-    border-radius: 20px;
-    margin-bottom: 100px;
-}
+
+     
 section#restaurants{
     text-align: center;
     width: 100%;
@@ -139,24 +135,20 @@ section#restaurants{
         width: 100%;
         padding-bottom: 30px;
     }
-
     .rest-carde{
         background-color: white;
         padding-bottom: 10px;
-        height: 80%;
-        @include carte-restaurant();
-        .img-rest{
-            width: auto;
-            height:300px ;
-            img{
-                width: 100%;
-                object-fit: cover;
-                height: 100%;
-                border-radius:20px 20px 0 0;
-            }
+        width: 40%;
+        height: 400px;
+        border-radius: 20px;
+        margin-bottom: 100px;
+        img{
+            width:100%;
+            object-fit: cover;
+            height: 80%;
+            border-radius:20px 20px 0 0;
         }
         .text-rest{
-        height: 100px;
         text-align: left;
         padding: 0 10px 0 10px;
         }
@@ -167,12 +159,14 @@ section#restaurants{
         }
          i{
             float:right;
+
             &:hover{
                color: $primaire;
             }
-        }
+         }
     }
 }
+
 footer{
     width: auto;
     height: 50px;
@@ -182,8 +176,15 @@ footer{
     background-color: rgb(54, 54, 54);
     color: white;
     position: relative;
-    // bottom: 0;
     margin-bottom: 0;
-
     padding-bottom: 0;
+
+    a{
+            margin-top: 10px ;
+            color: white;
+            text-decoration: none;
+        i{
+            margin-right: 10px;
+        }
+    }
 }
