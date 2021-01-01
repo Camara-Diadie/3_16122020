@@ -1,4 +1,6 @@
 @import'variable';
+@import'button';
+@import'footer';
 
 // fichier scss variable
 
@@ -22,16 +24,6 @@
            background-repeat: no-repeat;  
        }
    }
-
-@mixin btn {
- background-color: $secondaire;
- width: 300px;
- height: 60px;
- border-radius: 20px;
- border: none;
- color: white;
- font-size: 20px;
-}
    section#localisation-rest{
        width: auto;
        height: auto;
@@ -67,9 +59,6 @@
             }
            .btn{
                @include btn();
-               &:hover{
-                   background-color: darken($secondaire,  5);
-               }
             }
        }
    }
@@ -125,7 +114,6 @@
            }
        }
    }
-   
    section#restaurants{
     //    text-align: center;
        width: 100%;
@@ -179,28 +167,6 @@
        }
    }
    
-   footer{
-       width: auto;
-       height: auto;
-    //    display: flex
-    //    flex-wrap: column;
-    //    justify-content: space-around;
-       background-color: rgb(54, 54, 54);
-       color: white;
-       position: relative;
-       margin-bottom: 0;
-       padding-bottom: 0;
-        h3{
-            font-family: shrikhand;
-        }
-       a{
-               margin-top: 10px ;
-               color: white;
-               text-decoration: none;
-           i{
-               margin-right: 10px;
-           }
-       }
-   }
+   
 
 

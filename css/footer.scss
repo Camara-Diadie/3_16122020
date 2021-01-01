@@ -1,0 +1,23 @@
+footer{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: column;
+    justify-content: space-around;
+    background-color: rgb(54, 54, 54);
+    color: white;
+
+     h3{
+         font-family: shrikhand;
+         width: 100%;
+     }
+    a{
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+        text-decoration: none;
+        i{
+            margin-right: 10px;
+        }
+    }
+}

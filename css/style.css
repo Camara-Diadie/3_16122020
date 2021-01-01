@@ -1,3 +1,33 @@
+footer {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: column;
+      flex-wrap: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #363636;
+  color: white;
+}
+
+footer h3 {
+  font-family: shrikhand;
+  width: 100%;
+}
+
+footer a {
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+footer a i {
+  margin-right: 10px;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
   padding: 0;
@@ -67,17 +97,19 @@ section#localisation-rest .explore-rest button {
 }
 
 section#localisation-rest .explore-rest .btn {
-  background-color: #FF79DA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
   width: 300px;
   height: 60px;
   border-radius: 20px;
   border: none;
   color: white;
   font-size: 20px;
+  outline: #a8a8a838;
 }
 
 section#localisation-rest .explore-rest .btn:hover {
-  background-color: #ff60d3;
+  opacity: 0.5;
 }
 
 section#presentation {
@@ -202,29 +234,5 @@ section#restaurants .rest-carde i {
 
 section#restaurants .rest-carde i:hover {
   color: #9356DC;
-}
-
-footer {
-  width: auto;
-  height: auto;
-  background-color: #363636;
-  color: white;
-  position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-footer h3 {
-  font-family: shrikhand;
-}
-
-footer a {
-  margin-top: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-footer a i {
-  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+@mixin btn {
+    background:linear-gradient($primaire,$secondaire) ;
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    outline: $gris-claire;
+    &:hover{
+       opacity: 0.5;
+    }
+}
+

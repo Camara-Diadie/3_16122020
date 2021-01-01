@@ -1,0 +1,30 @@
+footer {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: column;
+      flex-wrap: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #363636;
+  color: white;
+}
+
+footer h3 {
+  font-family: shrikhand;
+  width: 100%;
+}
+
+footer a {
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+footer a i {
+  margin-right: 10px;
+}
+/*# sourceMappingURL=footer.css.map */
