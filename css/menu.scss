@@ -2,8 +2,7 @@
 @import 'variable';
 @import'button';
 @import'footer';
-
-
+@import 'keyframes';
 @media(max-width:640px)
 {
 
@@ -44,6 +43,13 @@
             border-radius: 60px 60px 0 0;
             margin-top: -80px;
             padding: 0px 0 0 0px;
+            width: 100%;
+                .entree, .plats, .desserts{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
                 h3{
                     padding-left: 10px;
                 }
@@ -51,39 +57,61 @@
                     text-transform: uppercase;
                     font-size: large;
                 } 
-                .cart{
+                .etiquette{
                     display: flex;
-                    align-items: stretch;
-                    width: 100%;
+                    align-items: center;
+                    justify-items: center;
+                    width: 80%;
                     height: auto;
                     margin-bottom:  30px ;
                     cursor: pointer;
-                    .text{
+                    .carte{
+                        display: flex;
                         background-color: white;
-                        width: 80%;
+                        width: 100%;
                         padding-left: 10px;
-                        border-radius: 20px ;
+                        border-radius: 20px;
+                        
                         h5{
                             font-size: large;
                         }
                         span{
                             float: right;
-                            padding-right: 20px;
+                            padding-right: 10px;
                             font-weight: bolder;
                         }
-                    }
-                    .btn-check{
-                        display:flex ;
-                        background-color: $tertiaire;
-                        border-radius:0 20px 20px 0;
-                        width: 20%;
-                        align-content: center;
-                        justify-content: center;
-                        padding-top: 40px;
-                        .far{
-                            font-size: 20px;
+                        .text{
+                            width:100%;
                         }
+
+                        .btn-check{
+                            display:flex;
+                            background-color: $tertiaire;
+                            border-radius:0 20px 20px 0;
+                            width: 0%;
+                            align-items: center;
+                            justify-content: center;
+                            opacity: 0;
+                            .fas{
+                                font-size: 40px;
+                                color: white;
+                            }
+
+                        }
+                        &:hover {
+                            .btn-check{
+                                animation: glissement 400ms ease-out;
+                                animation-fill-mode: both;
+
+                                .fas{
+                                    animation: rotation 0.5s;
+                                }
+                            }
+                            
+                        }
+
                     }
+                    
                 }
                 button{
                 margin: 50px auto 80px auto;

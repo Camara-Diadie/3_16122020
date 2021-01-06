@@ -40,6 +40,50 @@ footer a i {
   margin-right: 10px;
 }
 
+@-webkit-keyframes glissement {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+@keyframes glissement {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 @media (max-width: 640px) {
   html {
     font-family: 'Roboto', sans-serif;
@@ -95,6 +139,20 @@ footer a i {
     border-radius: 60px 60px 0 0;
     margin-top: -80px;
     padding: 0px 0 0 0px;
+    width: 100%;
+  }
+  #menu .carte-menu .entree, #menu .carte-menu .plats, #menu .carte-menu .desserts {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #menu .carte-menu h3 {
     padding-left: 10px;
@@ -103,48 +161,67 @@ footer a i {
     text-transform: uppercase;
     font-size: large;
   }
-  #menu .carte-menu .cart {
+  #menu .carte-menu .etiquette {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+    width: 80%;
     height: auto;
     margin-bottom: 30px;
     cursor: pointer;
   }
-  #menu .carte-menu .cart .text {
+  #menu .carte-menu .etiquette .carte {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-color: white;
-    width: 80%;
+    width: 100%;
     padding-left: 10px;
     border-radius: 20px;
   }
-  #menu .carte-menu .cart .text h5 {
+  #menu .carte-menu .etiquette .carte h5 {
     font-size: large;
   }
-  #menu .carte-menu .cart .text span {
+  #menu .carte-menu .etiquette .carte span {
     float: right;
-    padding-right: 20px;
+    padding-right: 10px;
     font-weight: bolder;
   }
-  #menu .carte-menu .cart .btn-check {
+  #menu .carte-menu .etiquette .carte .text {
+    width: 100%;
+  }
+  #menu .carte-menu .etiquette .carte .btn-check {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     background-color: #99E2D0;
     border-radius: 0 20px 20px 0;
-    width: 20%;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    width: 0%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 40px;
+    opacity: 0;
   }
-  #menu .carte-menu .cart .btn-check .far {
-    font-size: 20px;
+  #menu .carte-menu .etiquette .carte .btn-check .fas {
+    font-size: 40px;
+    color: white;
+  }
+  #menu .carte-menu .etiquette .carte:hover .btn-check {
+    -webkit-animation: glissement 400ms ease-out;
+            animation: glissement 400ms ease-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  #menu .carte-menu .etiquette .carte:hover .btn-check .fas {
+    -webkit-animation: rotation 0.5s;
+            animation: rotation 0.5s;
   }
   #menu .carte-menu button {
     margin: 50px auto 80px auto;
