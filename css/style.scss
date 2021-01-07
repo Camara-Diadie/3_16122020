@@ -1,172 +1,157 @@
-@import'variable';
-@import'button';
-@import'footer';
+@import "variable";
+@import "button";
+@import "footer";
 
 // fichier scss variable
 
+html {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: auto;
+  width: auto;
+}
+header {
+  width: 100%;
+  img {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: 20px auto 20px auto;
+    background-repeat: no-repeat;
+  }
+}
+section#localisation-rest {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background-color: $gris-claire;
+  .localiter {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: $gris;
+    font-size: large;
+    i {
+      padding: 0 10px 0 0;
+      margin: 0;
+    }
+  }
+  .explore-rest {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    h2 {
+      font-size: xx-large;
+    }
+    button {
+      cursor: pointer;
+    }
+    .btn {
+      @include btn();
+    }
+  }
+}
+section#presentation {
+  width: 100%;
+  height: auto;
+  display: flex;
 
-    html{
-        font-family: 'Roboto', sans-serif;
-        padding: 0;
-        margin: 0;
-   }
-   .container{
-       height: auto;
-       width: auto;
-   }
-   header{
-       width: 100%;
-       img{
-           height: auto;
-           width: auto;
-           display:block;
-           margin: 20px auto 20px auto;
-           background-repeat: no-repeat;  
-       }
-   }
-   section#localisation-rest{
-       width: auto;
-       height: auto;
-       display: flex;
-       flex-direction: column;
-       text-align: center;
-       padding: 0;
-       margin: 0;
-       background-color: $gris-claire;
-       .localiter 
-       {
-           padding: 0;
-           margin: 0;
-           text-align: center;
-           height: 50px;
-           width: 100%;
-           background-color: $gris;
-           font-size:large;
-           i{
-               padding:0 10px 0 0;
-               margin: 0;
-           }
-       }
-       .explore-rest{
-           width: 100%;
-           height: auto;
-           padding-bottom: 20px;
-           h2{
-               font-size: xx-large;
-           }
-           button { 
-                cursor: pointer;
-            }
-           .btn{
-               @include btn();
-            }
-       }
-   }
-   section#presentation{
-   
-       width:100%;
-       height: auto;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-around;
-    //    text-align: center;
-       padding: 0;
-       margin: 0;
-       padding-bottom: 50px;
-       h3{
-           width: 100%;
-       }
-           .carte-pres{
-           display: flex;
-           position: relative;
-           flex-wrap: wrap;
-           align-items: center;
-           justify-content: space-around;
-           background-color: $gris-claire;
-           width: 30%;
-           height: 100px;
-           border-radius: 20px;
-           margin-bottom: 50px;
-        //    @media (max-widht:640px){
-        //        width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  //    text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 50px;
+  h3 {
+    width: 100%;
+  }
+  .carte-pres {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $gris-claire;
+    width: 80%;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    p {
+      display: block;
+      font-weight: bold;
+    }
+    :nth-child(1) {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      background-color: $primaire;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      margin-right: 500px;
+    }
+    i {
+      margin-left: 0px;
+      &:hover {
+        color: $primaire;
+      }
+    }
+  }
+}
+section#restaurants {
+  //    text-align: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $gris-claire;
+  padding-bottom: 30px;
 
-        //    }
-           // &:hover{
-           //     background-color: $secondaire; voir avec mentorat
-           // }
-
-           :nth-child(1){
-               display: flex;
-               position:absolute;
-               align-items: center;
-               justify-content: center;
-               background-color: $primaire;
-               width: 30px;
-               height: 30px;
-               border-radius: 100%;
-               margin-right: 400px;
-           }
-           i{
-               margin-left: 0px;
-             &:hover{
-                 color:$primaire ;
-               }
-           }
-       }
-   }
-   section#restaurants{
-    //    text-align: center;
-       width: 100%;
-       padding: 0;
-       margin: 0;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-around;
-       background-color: $gris-claire;
-       padding-bottom: 30px;
-   
-       h2{
-           width: 100%;
-           padding-bottom: 30px;
-       }
-       .rest-carde{
-           background-color: white;
-           padding-bottom: 10px;
-           width: 40%;
-           height: 400px;
-           border-radius: 20px;
-           margin-bottom: 100px;
-           a{
-               text-decoration: none;
-               color: black;
-   
-           }
-           img{
-               width:100%;
-               object-fit: cover;
-               height: 80%;
-               border-radius:20px 20px 0 0;
-           }
-           .text-rest{
-           text-align: left;
-           padding: 0 10px 0 10px;
-   
-           }
-           :nth-child(1)
-           {
-               font-size:large;
-               font-weight: bolder;
-           }
-            i{
-               float:right;
-   
-               &:hover{
-                  color: $primaire;
-               }
-            }
-       }
-   }
-   
-   
-
-
+  h2 {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .rest-carde {
+    background-color: white;
+    padding-bottom: 10px;
+    width: 90%;
+    height: 400px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 80%;
+      border-radius: 20px 20px 0 0;
+    }
+    .text-rest {
+      text-align: left;
+      padding: 0 10px 0 10px;
+    }
+    :nth-child(1) {
+      font-size: large;
+      font-weight: bolder;
+    }
+    i {
+      float: right;
+      color: linear-gradient($primaire, $secondaire);
+      &:hover {
+        background-color: linear-gradient($primaire, $secondaire);
+      }
+    }
+  }
+}

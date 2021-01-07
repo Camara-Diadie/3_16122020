@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 header {
   width: 100%;
 }
@@ -11,22 +12,39 @@ header img {
 }
 
 footer {
-  width: auto;
+  text-align: left;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: column;
       flex-wrap: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   background-color: #363636;
   color: white;
 }
 
-footer h3 {
-  font-family: shrikhand;
+footer .info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0 20px 20px;
+}
+
+footer .info-footer div {
+  padding: 20px 0 20px 0;
+}
+
+footer .info-footer h3 {
+  font-family: "Shrikhand", cursive;
   width: 100%;
+  font-weight: bolder;
 }
 
 footer a {
@@ -84,159 +102,246 @@ footer a i {
   }
 }
 
-@media (max-width: 640px) {
-  html {
-    font-family: 'Roboto', sans-serif;
-    padding: 0;
-    margin: 0;
-  }
-  #menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: auto;
-    width: auto;
-    border-radius: 40px 40px 0 0;
-  }
-  #menu .img-header {
-    display: static;
-  }
-  #menu .img-header img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100%;
-  }
-  #menu h3 {
-    font-family: shrikhand;
-    font-size: xx-large;
-    font-weight: 900;
-  }
-  #menu .carte-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background-color: #f0eeee;
-    border-radius: 60px 60px 0 0;
-    margin-top: -80px;
-    padding: 0px 0 0 0px;
-    width: 100%;
-  }
-  #menu .carte-menu .entree, #menu .carte-menu .plats, #menu .carte-menu .desserts {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #menu .carte-menu h3 {
-    padding-left: 10px;
-  }
-  #menu .carte-menu h4 {
-    text-transform: uppercase;
-    font-size: large;
-  }
-  #menu .carte-menu .etiquette {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: center;
-    width: 80%;
-    height: auto;
-    margin-bottom: 30px;
-    cursor: pointer;
-  }
-  #menu .carte-menu .etiquette .carte {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: white;
-    width: 100%;
-    padding-left: 10px;
-    border-radius: 20px;
-  }
-  #menu .carte-menu .etiquette .carte h5 {
-    font-size: large;
-  }
-  #menu .carte-menu .etiquette .carte span {
-    float: right;
-    padding-right: 10px;
-    font-weight: bolder;
-  }
-  #menu .carte-menu .etiquette .carte .text {
-    width: 100%;
-  }
-  #menu .carte-menu .etiquette .carte .btn-check {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: #99E2D0;
-    border-radius: 0 20px 20px 0;
-    width: 0%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translatey(500px);
+            transform: translatey(500px);
     opacity: 0;
   }
-  #menu .carte-menu .etiquette .carte .btn-check .fas {
-    font-size: 40px;
-    color: white;
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
-  #menu .carte-menu .etiquette .carte:hover .btn-check {
-    -webkit-animation: glissement 400ms ease-out;
-            animation: glissement 400ms ease-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translatey(500px);
+            transform: translatey(500px);
+    opacity: 0;
   }
-  #menu .carte-menu .etiquette .carte:hover .btn-check .fas {
-    -webkit-animation: rotation 0.5s;
-            animation: rotation 0.5s;
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
-  #menu .carte-menu button {
-    margin: 50px auto 80px auto;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-    background: linear-gradient(#9356DC, #FF79DA);
-    width: 300px;
-    height: 60px;
-    border-radius: 20px;
-    border: none;
-    color: white;
-    font-size: 20px;
-    outline: #a8a8a838;
-  }
-  #menu .carte-menu button:hover {
-    opacity: 0.5;
-  }
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: auto;
+  border-radius: 40px 40px 0 0;
+}
+
+#menu .img-header {
+  display: static;
+}
+
+#menu .img-header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+#menu h3 {
+  width: 90%;
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+  font-style: italic;
+}
+
+#menu h3 i.far.fa-heart {
+  float: right;
+  cursor: pointer;
+}
+
+#menu .carte-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f0eeee;
+  border-radius: 60px 60px 0 0;
+  margin-top: -80px;
+  padding: 0px 0 0 0px;
+  width: 100%;
+}
+
+#menu .carte-menu .entree,
+#menu .carte-menu .plats,
+#menu .carte-menu .desserts {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+#menu .carte-menu .entree h4,
+#menu .carte-menu .plats h4,
+#menu .carte-menu .desserts h4 {
+  width: 90%;
+  text-transform: uppercase;
+  font-size: large;
+  padding-left: 10px;
+}
+
+#menu .carte-menu .entree h4::after,
+#menu .carte-menu .plats h4::after,
+#menu .carte-menu .desserts h4::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #99e2d0;
+}
+
+#menu .carte-menu h3 {
+  padding-left: 10px;
+}
+
+#menu .carte-menu .etiquette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 80%;
+  height: auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+  -webkit-transition: 10s;
+  transition: 10s;
+  -webkit-animation: slide 10s;
+          animation: slide 10s;
+}
+
+#menu .carte-menu .etiquette.un {
+  -webkit-animation: slide 1s;
+          animation: slide 1s;
+}
+
+#menu .carte-menu .etiquette.deux {
+  -webkit-animation: slide 2s;
+          animation: slide 2s;
+}
+
+#menu .carte-menu .etiquette.trois {
+  -webkit-animation: slide 3s;
+          animation: slide 3s;
+}
+
+#menu .carte-menu .etiquette .carte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+#menu .carte-menu .etiquette .carte h5 {
+  font-size: large;
+}
+
+#menu .carte-menu .etiquette .carte span {
+  float: right;
+  padding-right: 10px;
+  font-weight: bolder;
+}
+
+#menu .carte-menu .etiquette .carte .text {
+  width: 100%;
+}
+
+#menu .carte-menu .etiquette .carte .btn-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #99e2d0;
+  border-radius: 0 20px 20px 0;
+  width: 0%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+
+#menu .carte-menu .etiquette .carte .btn-check .fas {
+  font-size: 40px;
+  color: white;
+}
+
+#menu .carte-menu .etiquette .carte:hover .btn-check {
+  -webkit-animation: glissement 400ms ease-out;
+          animation: glissement 400ms ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#menu .carte-menu .etiquette .carte:hover .btn-check .fas {
+  -webkit-animation: rotation 0.5s;
+          animation: rotation 0.5s;
+}
+
+#menu .carte-menu button {
+  margin: 50px auto 80px auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
+  width: 300px;
+  height: 60px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  outline: #a8a8a838;
+}
+
+#menu .carte-menu button:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=menu.css.map */

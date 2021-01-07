@@ -1,20 +1,30 @@
-@keyframes glissement{
-    from {
-        width: 0%;
-        opacity: 0;
-      }
-      to {
-        width: 30%;
-        opacity: 1;
-      }
-    }
-
-@keyframes rotation{
-    0%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
+@keyframes glissement {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 30%;
+    opacity: 1;
+  }
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translatey(500px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,124 +1,146 @@
-@import 'header';
-@import 'variable';
-@import'button';
-@import'footer';
-@import 'keyframes';
-@media(max-width:640px)
-{
+@import "header";
+@import "variable";
+@import "button";
+@import "footer";
+@import "keyframes";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+html {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    html{
-        font-family: 'Roboto', sans-serif;
-        padding: 0;
-        margin: 0;
-    } 
+#menu {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  border-radius: 40px 40px 0 0;
+  .img-header {
+    display: static;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  h3 {
+    width: 90%;
+    font-family: "Shrikhand", cursive;
 
-    #menu{
+    font-size: 40px;
+    font-style: italic;
+    // font-weight: 1000px;
+    i.far.fa-heart {
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .carte-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-menu;
+    border-radius: 60px 60px 0 0;
+    margin-top: -80px;
+    padding: 0px 0 0 0px;
+    width: 100%;
+
+    .entree,
+    .plats,
+    .desserts {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      h4 {
+        width: 90%;
+        text-transform: uppercase;
+        font-size: large;
+        padding-left: 10px;
+        &::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 3px;
+          background: $tertiaire;
+        }
+      }
+    }
+    h3 {
+      padding-left: 10px;
+    }
+    .etiquette {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      width: 80%;
+      height: auto;
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: 10s;
+      animation: slide 10s;
+      &.un {
+        animation: slide 1s;
+      }
+      &.deux {
+        animation: slide 2s;
+      }
+      &.trois {
+        animation: slide 3s;
+      }
+      .carte {
         display: flex;
-        flex-direction: column;
-        height: auto;
-        width: auto;
-        border-radius: 40px 40px 0 0;
-        .img-header{
-            display: static;
-            img{
-                width:100%;
-                object-fit: cover;
-                height: 100%;
+        background-color: white;
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 20px;
+
+        h5 {
+          font-size: large;
+        }
+        span {
+          float: right;
+          padding-right: 10px;
+          font-weight: bolder;
+        }
+        .text {
+          width: 100%;
+        }
+
+        .btn-check {
+          display: flex;
+          background-color: $tertiaire;
+          border-radius: 0 20px 20px 0;
+          width: 0%;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          .fas {
+            font-size: 40px;
+            color: white;
+          }
+        }
+        &:hover {
+          .btn-check {
+            animation: glissement 400ms ease-out;
+            animation-fill-mode: both;
+
+            .fas {
+              animation: rotation 0.5s;
             }
+          }
         }
-        h3{
-            font-family: shrikhand;
-            font-size:xx-large;
-            font-weight:900;
-            
-        }
-        .carte-menu{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            justify-content: space-between;
-            background-color: $color-menu;
-            border-radius: 60px 60px 0 0;
-            margin-top: -80px;
-            padding: 0px 0 0 0px;
-            width: 100%;
-                .entree, .plats, .desserts{
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                h3{
-                    padding-left: 10px;
-                }
-                h4{
-                    text-transform: uppercase;
-                    font-size: large;
-                } 
-                .etiquette{
-                    display: flex;
-                    align-items: center;
-                    justify-items: center;
-                    width: 80%;
-                    height: auto;
-                    margin-bottom:  30px ;
-                    cursor: pointer;
-                    .carte{
-                        display: flex;
-                        background-color: white;
-                        width: 100%;
-                        padding-left: 10px;
-                        border-radius: 20px;
-                        
-                        h5{
-                            font-size: large;
-                        }
-                        span{
-                            float: right;
-                            padding-right: 10px;
-                            font-weight: bolder;
-                        }
-                        .text{
-                            width:100%;
-                        }
-
-                        .btn-check{
-                            display:flex;
-                            background-color: $tertiaire;
-                            border-radius:0 20px 20px 0;
-                            width: 0%;
-                            align-items: center;
-                            justify-content: center;
-                            opacity: 0;
-                            .fas{
-                                font-size: 40px;
-                                color: white;
-                            }
-
-                        }
-                        &:hover {
-                            .btn-check{
-                                animation: glissement 400ms ease-out;
-                                animation-fill-mode: both;
-
-                                .fas{
-                                    animation: rotation 0.5s;
-                                }
-                            }
-                            
-                        }
-
-                    }
-                    
-                }
-                button{
-                margin: 50px auto 80px auto;
-                    @include btn
-                }
-            }
-            
-        }
-
+      }
+    }
+    button {
+      margin: 50px auto 80px auto;
+      @include btn;
+    }
+  }
 }

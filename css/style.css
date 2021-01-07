@@ -1,20 +1,37 @@
 footer {
-  width: auto;
+  text-align: left;
+  width: 100%;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: column;
       flex-wrap: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   background-color: #363636;
   color: white;
 }
 
-footer h3 {
-  font-family: shrikhand;
+footer .info-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0 20px 20px;
+}
+
+footer .info-footer div {
+  padding: 20px 0 20px 0;
+}
+
+footer .info-footer h3 {
+  font-family: "Shrikhand", cursive;
   width: 100%;
+  font-weight: bolder;
 }
 
 footer a {
@@ -29,7 +46,7 @@ footer a i {
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -97,8 +114,8 @@ section#localisation-rest .explore-rest button {
 }
 
 section#localisation-rest .explore-rest .btn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background: linear-gradient(#9356dc, #ff79da);
   width: 300px;
   height: 60px;
   border-radius: 20px;
@@ -135,19 +152,21 @@ section#presentation .carte-pres {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #a8a8a838;
-  width: 30%;
+  width: 80%;
   height: 100px;
   border-radius: 20px;
   margin-bottom: 50px;
+}
+
+section#presentation .carte-pres p {
+  display: block;
+  font-weight: bold;
 }
 
 section#presentation .carte-pres :nth-child(1) {
@@ -161,11 +180,11 @@ section#presentation .carte-pres :nth-child(1) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #9356DC;
+  background-color: #9356dc;
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  margin-right: 400px;
+  margin-right: 500px;
 }
 
 section#presentation .carte-pres i {
@@ -173,7 +192,7 @@ section#presentation .carte-pres i {
 }
 
 section#presentation .carte-pres i:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 section#restaurants {
@@ -199,7 +218,7 @@ section#restaurants h2 {
 section#restaurants .rest-carde {
   background-color: white;
   padding-bottom: 10px;
-  width: 40%;
+  width: 90%;
   height: 400px;
   border-radius: 20px;
   margin-bottom: 100px;
@@ -230,9 +249,10 @@ section#restaurants .rest-carde :nth-child(1) {
 
 section#restaurants .rest-carde i {
   float: right;
+  color: linear-gradient(#9356dc, #ff79da);
 }
 
 section#restaurants .rest-carde i:hover {
-  color: #9356DC;
+  background-color: linear-gradient(#9356dc, #ff79da);
 }
 /*# sourceMappingURL=style.css.map */

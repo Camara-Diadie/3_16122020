@@ -41,4 +41,30 @@
             transform: rotate(0deg);
   }
 }
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translatey(500px);
+            transform: translatey(500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translatey(500px);
+            transform: translatey(500px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=keyframes.css.map */
