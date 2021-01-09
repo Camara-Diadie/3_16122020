@@ -1,10 +1,10 @@
 header {
-  width: 100%;
+  width: 90%;
 }
 
 header img {
   height: auto;
-  width: auto;
+  width: 100%;
   display: block;
   margin: 20px auto 20px auto;
   background-repeat: no-repeat;

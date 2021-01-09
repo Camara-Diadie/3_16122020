@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 header {
-  width: 100%;
+  width: 90%;
 }
 
 header img {
   height: auto;
-  width: auto;
+  width: 100%;
   display: block;
   margin: 20px auto 20px auto;
   background-repeat: no-repeat;
@@ -215,25 +215,6 @@ html {
   justify-items: center;
 }
 
-#menu .carte-menu .entree h4,
-#menu .carte-menu .plats h4,
-#menu .carte-menu .desserts h4 {
-  width: 90%;
-  text-transform: uppercase;
-  font-size: large;
-  padding-left: 10px;
-}
-
-#menu .carte-menu .entree h4::after,
-#menu .carte-menu .plats h4::after,
-#menu .carte-menu .desserts h4::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #99e2d0;
-}
-
 #menu .carte-menu h3 {
   padding-left: 10px;
 }
@@ -246,14 +227,14 @@ html {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  width: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
   height: auto;
   margin-bottom: 30px;
   cursor: pointer;
-  -webkit-transition: 10s;
-  transition: 10s;
-  -webkit-animation: slide 10s;
-          animation: slide 10s;
+  -webkit-animation: slide 2.5s;
+          animation: slide 2.5s;
 }
 
 #menu .carte-menu .etiquette.un {
@@ -269,6 +250,21 @@ html {
 #menu .carte-menu .etiquette.trois {
   -webkit-animation: slide 3s;
           animation: slide 3s;
+}
+
+#menu .carte-menu .etiquette h4 {
+  width: 90%;
+  text-transform: uppercase;
+  font-size: large;
+  padding-left: 10px;
+}
+
+#menu .carte-menu .etiquette h4::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #99e2d0;
 }
 
 #menu .carte-menu .etiquette .carte {
@@ -324,8 +320,8 @@ html {
 }
 
 #menu .carte-menu .etiquette .carte:hover .btn-check .fas {
-  -webkit-animation: rotation 0.5s;
-          animation: rotation 0.5s;
+  -webkit-animation: rotation 0.6s;
+          animation: rotation 0.6s;
 }
 
 #menu .carte-menu button {

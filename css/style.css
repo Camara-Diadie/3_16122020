@@ -45,214 +45,231 @@ footer a i {
   margin-right: 10px;
 }
 
-html {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
+@media screen and (min-width: 640px) {
+  .carte-pres {
+    width: 40%;
+  }
 }
 
-.container {
-  height: auto;
-  width: auto;
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  html {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  header {
+    width: 100%;
+  }
+  header img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    width: 100%;
+    margin: 20px auto 20px auto;
+    background-repeat: no-repeat;
+  }
+  section#localisation-rest {
+    width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #a8a8a838;
+  }
+  section#localisation-rest .localiter {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    background-color: #9094977e;
+    font-size: large;
+  }
+  section#localisation-rest .localiter i {
+    padding: 0 10px 0 0;
+    margin: 0;
+  }
+  section#localisation-rest .explore-rest {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  section#localisation-rest .explore-rest h2 {
+    font-size: xx-large;
+  }
+  section#localisation-rest .explore-rest button {
+    cursor: pointer;
+  }
+  section#localisation-rest .explore-rest .btn {
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+    background: linear-gradient(#9356dc, #ff79da);
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    outline: #a8a8a838;
+  }
+  section#localisation-rest .explore-rest .btn:hover {
+    opacity: 0.5;
+  }
+  section#presentation {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 50px;
+  }
+  section#presentation h3 {
+    width: 100%;
+  }
+  section#presentation .carte-pres {
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #a8a8a838;
+    width: 90%;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+  }
+  section#presentation .carte-pres p {
+    font-weight: bold;
+  }
+  section#presentation .carte-pres .fas {
+    right: 300px;
+  }
+  section#presentation .carte-pres .chifre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section#presentation .carte-pres :nth-child(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #9356dc;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    right: 30px;
+  }
+  section#presentation .carte-pres i {
+    margin-left: 40px;
+  }
+  section#presentation .carte-pres i:hover {
+    color: #9356dc;
+  }
 }
 
-header {
-  width: 100%;
+@media screen and (min-width: 350px) and (max-width: 414px) and (min-width: 414px) and (max-width: 950px) {
+  section#presentation .carte-pres {
+    width: 70%;
+  }
+  section#presentation .carte-pres :nth-child(1) {
+    right: 1000px;
+    left: -23px;
+  }
 }
 
-header img {
-  height: auto;
-  width: auto;
-  display: block;
-  margin: 20px auto 20px auto;
-  background-repeat: no-repeat;
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  section#restaurants {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-color: #a8a8a838;
+    padding-bottom: 30px;
+  }
+  section#restaurants h2 {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  section#restaurants .rest-carde {
+    background-color: white;
+    padding-bottom: 10px;
+    width: 90%;
+    height: 400px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+  }
+  section#restaurants .rest-carde a {
+    text-decoration: none;
+    color: black;
+  }
+  section#restaurants .rest-carde img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 80%;
+    border-radius: 20px 20px 0 0;
+  }
+  section#restaurants .rest-carde .text-rest {
+    text-align: left;
+    padding: 0 10px 0 10px;
+  }
+  section#restaurants .rest-carde :nth-child(1) {
+    font-size: large;
+    font-weight: bolder;
+  }
+  section#restaurants .rest-carde i {
+    float: right;
+    color: linear-gradient(#9356dc, #ff79da);
+  }
+  section#restaurants .rest-carde i:hover {
+    background-color: linear-gradient(#9356dc, #ff79da);
+  }
 }
 
-section#localisation-rest {
-  width: auto;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  background-color: #a8a8a838;
-}
-
-section#localisation-rest .localiter {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  height: 50px;
-  width: 100%;
-  background-color: #9094977e;
-  font-size: large;
-}
-
-section#localisation-rest .localiter i {
-  padding: 0 10px 0 0;
-  margin: 0;
-}
-
-section#localisation-rest .explore-rest {
-  width: 100%;
-  height: auto;
-  padding-bottom: 20px;
-}
-
-section#localisation-rest .explore-rest h2 {
-  font-size: xx-large;
-}
-
-section#localisation-rest .explore-rest button {
-  cursor: pointer;
-}
-
-section#localisation-rest .explore-rest .btn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
-  background: linear-gradient(#9356dc, #ff79da);
-  width: 300px;
-  height: 60px;
-  border-radius: 20px;
-  border: none;
-  color: white;
-  font-size: 20px;
-  outline: #a8a8a838;
-}
-
-section#localisation-rest .explore-rest .btn:hover {
-  opacity: 0.5;
-}
-
-section#presentation {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 50px;
-}
-
-section#presentation h3 {
-  width: 100%;
-}
-
-section#presentation .carte-pres {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #a8a8a838;
-  width: 80%;
-  height: 100px;
-  border-radius: 20px;
-  margin-bottom: 50px;
-}
-
-section#presentation .carte-pres p {
-  display: block;
-  font-weight: bold;
-}
-
-section#presentation .carte-pres :nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #9356dc;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  margin-right: 500px;
-}
-
-section#presentation .carte-pres i {
-  margin-left: 0px;
-}
-
-section#presentation .carte-pres i:hover {
-  color: #9356dc;
-}
-
-section#restaurants {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #a8a8a838;
-  padding-bottom: 30px;
-}
-
-section#restaurants h2 {
-  width: 100%;
-  padding-bottom: 30px;
-}
-
-section#restaurants .rest-carde {
-  background-color: white;
-  padding-bottom: 10px;
-  width: 90%;
-  height: 400px;
-  border-radius: 20px;
-  margin-bottom: 100px;
-}
-
-section#restaurants .rest-carde a {
-  text-decoration: none;
-  color: black;
-}
-
-section#restaurants .rest-carde img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 80%;
-  border-radius: 20px 20px 0 0;
-}
-
-section#restaurants .rest-carde .text-rest {
-  text-align: left;
-  padding: 0 10px 0 10px;
-}
-
-section#restaurants .rest-carde :nth-child(1) {
-  font-size: large;
-  font-weight: bolder;
-}
-
-section#restaurants .rest-carde i {
-  float: right;
-  color: linear-gradient(#9356dc, #ff79da);
-}
-
-section#restaurants .rest-carde i:hover {
-  background-color: linear-gradient(#9356dc, #ff79da);
+@media screen and (min-width: 350px) and (max-width: 414px) and (min-width: 650px) {
+  section#restaurants .rest-carde {
+    width: 35%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
