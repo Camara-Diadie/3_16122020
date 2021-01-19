@@ -45,12 +45,6 @@ footer a i {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 640px) {
-  .carte-pres {
-    width: 40%;
-  }
-}
-
 header {
   width: 100%;
 }
@@ -211,8 +205,9 @@ section#presentation {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
   margin: 0;
   padding-bottom: 50px;
@@ -220,6 +215,7 @@ section#presentation {
 
 section#presentation h3 {
   width: 100%;
+  margin-bottom: 30px;
 }
 
 section#presentation .carte-pres {
@@ -229,21 +225,21 @@ section#presentation .carte-pres {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: #a8a8a838;
   width: 90%;
-  height: 100px;
+  padding: 10px 10px 10px 0;
   border-radius: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 2px 5px grey;
+          box-shadow: 2px 2px 5px grey;
 }
 
 section#presentation .carte-pres p {
   font-weight: bold;
-}
-
-section#presentation .carte-pres .fas {
-  right: 300px;
+  margin-left: 10px;
 }
 
 section#presentation .carte-pres .chifre {
@@ -270,7 +266,8 @@ section#presentation .carte-pres :nth-child(1) {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-  right: 20px;
+  right: 13px;
+  color: white;
 }
 
 section#presentation .carte-pres i {
@@ -282,20 +279,35 @@ section#presentation .carte-pres i:hover {
 }
 
 @media screen and (min-width: 375px) {
+  section#presentation .carte-pres {
+    width: 80%;
+  }
+  section#presentation .carte-pres p {
+    margin-left: 30px;
+  }
   section#presentation .carte-pres :nth-child(1) {
-    right: 30px;
+    right: 13px;
   }
 }
 
 @media screen and (min-width: 425px) {
+  section#presentation .carte-pres {
+    width: 70%;
+  }
   section#presentation .carte-pres :nth-child(1) {
-    right: 40px;
+    right: 13px;
   }
 }
 
 @media screen and (min-width: 768px) {
   section#presentation .carte-pres {
-    width: 30%;
+    width: 50%;
+  }
+  section#presentation .carte-pres p {
+    margin-left: 50px;
+  }
+  section#presentation .carte-pres .fas {
+    margin-left: 50px;
   }
   section#presentation .carte-pres :nth-child(1) {
     right: 15px;
@@ -304,19 +316,25 @@ section#presentation .carte-pres i:hover {
 
 @media screen and (min-width: 1024px) {
   section#presentation .carte-pres {
-    width: 30%;
+    width: 50%;
+  }
+  section#presentation .carte-pres p {
+    margin-left: 100px;
   }
   section#presentation .carte-pres :nth-child(1) {
-    right: 30px;
+    right: 13px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   section#presentation .carte-pres {
-    width: 30%;
+    width: 50%;
+  }
+  section#presentation .carte-pres p {
+    margin-left: 150px;
   }
   section#presentation .carte-pres :nth-child(1) {
-    right: 50px;
+    right: 13px;
   }
 }
 
@@ -344,7 +362,7 @@ article#restaurants .rest-carde {
   background-color: white;
   padding-bottom: 10px;
   width: 90%;
-  height: 400px;
+  height: 200px;
   border-radius: 20px;
   margin-bottom: 100px;
 }
@@ -358,32 +376,68 @@ article#restaurants .rest-carde img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 80%;
+  height: 70%;
   border-radius: 20px 20px 0 0;
 }
 
-article#restaurants .rest-carde .text-rest {
+article#restaurants .rest-carde .info-rest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+article#restaurants .rest-carde .info-rest .text-rest {
+  width: 80%;
   text-align: left;
-  padding: 0 10px 0 10px;
+  padding: 0 15px 0 15px;
 }
 
-article#restaurants .rest-carde :nth-child(1) {
-  font-size: large;
-  font-weight: bolder;
+article#restaurants .rest-carde .info-rest .text-rest p:first-of-type {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: medium;
+  font-weight: bold;
 }
 
-article#restaurants .rest-carde i {
-  float: right;
-  color: linear-gradient(#9356dc, #ff79da);
+article#restaurants .rest-carde .info-rest .text-rest p:last-of-type {
+  margin: 5px 0 0 0;
 }
 
-article#restaurants .rest-carde i:hover {
-  background-color: linear-gradient(#9356dc, #ff79da);
+article#restaurants .rest-carde .info-rest .heart {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: stretch;
+  font-size: larger;
+}
+
+article#restaurants .rest-carde .info-rest .heart .far {
+  font-size: x-large;
+}
+
+article#restaurants .rest-carde .info-rest .heart .fas {
+  display: none;
+  font-size: x-large;
+}
+
+article#restaurants .rest-carde .info-rest .heart:hover .far {
+  display: none;
+}
+
+article#restaurants .rest-carde .info-rest .heart:hover .fas {
+  display: inline;
+  color: #df2323;
 }
 
 @media screen and (min-width: 768px) {
   article#restaurants .rest-carde {
-    width: 45%;
+    height: 250px;
+    width: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */

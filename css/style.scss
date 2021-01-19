@@ -77,29 +77,30 @@ section#presentation {
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0;
   margin: 0;
   padding-bottom: 50px;
   h3 {
     width: 100%;
+    margin-bottom: 30px;
   }
   .carte-pres {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: $gris-claire;
     width: 90%;
-    height: 100px;
+    padding: 10px 10px 10px 0;
     border-radius: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px grey;
 
     p {
       font-weight: bold;
+      margin-left: 10px;
     }
-    .fas {
-      right: 300px;
-    }
+
     .chifre {
       display: flex;
       justify-content: space-between;
@@ -113,7 +114,8 @@ section#presentation {
       width: 30px;
       height: 30px;
       border-radius: 100%;
-      right: 20px;
+      right: 13px;
+      color: white;
     }
     i {
       margin-left: 40px;
@@ -122,31 +124,48 @@ section#presentation {
       }
     }
     @media screen and (min-width: 375px) {
+      width: 80%;
+      p {
+        margin-left: 30px;
+      }
       :nth-child(1) {
-        right: 30px;
+        right: 13px;
       }
     }
     @media screen and (min-width: 425px) {
+      width: 70%;
       :nth-child(1) {
-        right: 40px;
+        right: 13px;
       }
     }
     @media screen and (min-width: 768px) {
-      width: 30%;
+      width: 50%;
+      p {
+        margin-left: 50px;
+      }
+      .fas {
+        margin-left: 50px;
+      }
       :nth-child(1) {
         right: 15px;
       }
     }
     @media screen and (min-width: 1024px) {
-      width: 30%;
+      width: 50%;
+      p {
+        margin-left: 100px;
+      }
       :nth-child(1) {
-        right: 30px;
+        right: 13px;
       }
     }
     @media screen and (min-width: 1440px) {
-      width: 30%;
+      width: 50%;
+      p {
+        margin-left: 150px;
+      }
       :nth-child(1) {
-        right: 50px;
+        right: 13px;
       }
     }
   }
@@ -169,7 +188,7 @@ article#restaurants {
     background-color: white;
     padding-bottom: 10px;
     width: 90%;
-    height: 400px;
+    height: 200px;
     border-radius: 20px;
     margin-bottom: 100px;
     a {
@@ -179,26 +198,58 @@ article#restaurants {
     img {
       width: 100%;
       object-fit: cover;
-      height: 80%;
+      height: 70%;
       border-radius: 20px 20px 0 0;
     }
-    .text-rest {
-      text-align: left;
-      padding: 0 10px 0 10px;
-    }
-    :nth-child(1) {
-      font-size: large;
-      font-weight: bolder;
-    }
-    i {
-      float: right;
-      color: linear-gradient($primaire, $secondaire);
-      &:hover {
-        background-color: linear-gradient($primaire, $secondaire);
+    .info-rest {
+      display: flex;
+      width: 100%;
+      .text-rest {
+        width: 80%;
+        text-align: left;
+        padding: 0 15px 0 15px;
+        p:first-of-type {
+          margin-bottom: 0;
+          margin-top: 10px;
+          font-size: medium;
+          font-weight: bold;
+        }
+        p:last-of-type {
+          margin: 5px 0 0 0;
+        }
+      }
+
+      .heart {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        // position: absolute;
+        justify-items: stretch;
+        font-size: larger;
+
+        // margin-top: 20px;
+        .far {
+          font-size: x-large;
+        }
+        .fas {
+          display: none;
+          font-size: x-large;
+        }
+        &:hover {
+          .far {
+            display: none;
+          }
+          .fas {
+            display: inline;
+            color: #df2323;
+          }
+        }
       }
     }
+
     @media screen and (min-width: 768px) {
-      width: 45%;
+      height: 250px;
+      width: 40%;
     }
   }
 }
