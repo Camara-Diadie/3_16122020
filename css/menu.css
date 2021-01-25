@@ -157,6 +157,28 @@ footer a i {
   }
 }
 
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 html {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -190,15 +212,35 @@ html {
 }
 
 #menu h3 {
-  width: 90%;
+  width: auto;
   font-family: "Shrikhand", cursive;
-  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-size: 22px;
   font-style: italic;
 }
 
 #menu h3 i.far.fa-heart {
-  float: right;
+  padding-left: 50px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  #menu h3 i.far.fa-heart {
+    padding-left: 450px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #menu h3 i.far.fa-heart {
+    padding-left: 700px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #menu h3 i.far.fa-heart {
+    padding-left: 1100px;
+  }
 }
 
 #menu .carte-menu {
@@ -313,11 +355,18 @@ html {
 #menu .carte-menu .etiquette .carte span {
   float: right;
   padding-right: 10px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 #menu .carte-menu .etiquette .carte .text {
   width: 100%;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  #menu .carte-menu .etiquette .carte .text {
+    font-size: 20px;
+  }
 }
 
 #menu .carte-menu .etiquette .carte .btn-check {

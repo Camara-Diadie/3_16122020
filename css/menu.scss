@@ -10,7 +10,6 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
-
 #menu {
   display: flex;
   flex-direction: column;
@@ -26,16 +25,31 @@ html {
     }
   }
   h3 {
-    width: 90%;
+    width: auto;
     font-family: "Shrikhand", cursive;
-
-    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 22px;
     font-style: italic;
 
-    // font-weight: 1000px;
     i.far.fa-heart {
-      float: right;
+      padding-left: 50px;
       cursor: pointer;
+    }
+    @media screen and (min-width: 768px) {
+      i.far.fa-heart {
+        padding-left: 450px;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      i.far.fa-heart {
+        padding-left: 700px;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      i.far.fa-heart {
+        padding-left: 1100px;
+      }
     }
   }
   .carte-menu {
@@ -109,10 +123,14 @@ html {
         span {
           float: right;
           padding-right: 10px;
-          font-weight: bolder;
+          font-weight: bold;
         }
         .text {
           width: 100%;
+          font-size: 12px;
+          @media screen and (min-width: 768px) {
+            font-size: 20px;
+          }
         }
 
         .btn-check {
