@@ -179,6 +179,24 @@ footer a i {
   }
 }
 
+@-webkit-keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes chargement {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
 html {
   font-family: "Roboto", sans-serif;
   padding: 0;

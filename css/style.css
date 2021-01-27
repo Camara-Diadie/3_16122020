@@ -179,34 +179,21 @@ header .logo img {
 }
 
 @-webkit-keyframes chargement {
-  100% {
-    opacity: 0%;
-  }
   0% {
-    opacity: 0%;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 
 @keyframes chargement {
-  100% {
-    opacity: 0%;
-  }
   0% {
-    opacity: 0%;
+    visibility: visible;
   }
-}
-
-.principal {
-  height: auto;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 40px;
-  text-align: center;
-  height: 100%;
-  padding-top: 250px;
-  -webkit-animation: chargement 3s linear;
-          animation: chargement 3s linear;
+  100% {
+    visibility: hidden;
+  }
 }
 
 .loader {
@@ -246,9 +233,21 @@ html {
 }
 
 .principal {
-  -webkit-animation: chargement 3s linear;
-          animation: chargement 3s linear;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 250px;
+  background-color: white;
+  -webkit-animation: chargement 3s both;
+          animation: chargement 3s both;
+  z-index: 1;
 }
 
 .container {

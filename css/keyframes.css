@@ -91,20 +91,20 @@
 }
 
 @-webkit-keyframes chargement {
-  100% {
-    opacity: 0%;
-  }
   0% {
-    opacity: 0%;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 
 @keyframes chargement {
-  100% {
-    opacity: 0%;
-  }
   0% {
-    opacity: 0%;
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 /*# sourceMappingURL=keyframes.css.map */

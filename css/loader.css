@@ -92,33 +92,20 @@
 
 @-webkit-keyframes chargement {
   0% {
-    opacity: 100%;
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
 @keyframes chargement {
   0% {
-    opacity: 100%;
+    visibility: visible;
   }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
-}
-
-.principal {
-  height: auto;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 40px;
-  text-align: center;
-  height: 100%;
-  padding-top: 250px;
-  -webkit-animation: chargement 3s linear;
-          animation: chargement 3s linear;
 }
 
 .loader {
