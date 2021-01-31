@@ -381,6 +381,11 @@ html {
   font-size: 12px;
 }
 
+#menu .carte-menu .etiquette .carte .text h5 {
+  margin: 0;
+  margin-top: 5px;
+}
+
 @media screen and (min-width: 768px) {
   #menu .carte-menu .etiquette .carte .text {
     font-size: 20px;
