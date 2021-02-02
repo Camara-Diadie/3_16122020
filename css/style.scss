@@ -1,7 +1,6 @@
 @import "variable";
 @import "button";
 @import "footer";
-@import "responsive";
 @import "header";
 @import "loader";
 
@@ -12,7 +11,7 @@ html {
   padding: 0;
   margin: 0;
 }
-.principal {
+.principal-loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +26,11 @@ html {
   background-color: rgb(255, 255, 255);
   animation: chargement 3s both;
   z-index: 1;
+  img {
+    width: 90%;
+  }
 }
+
 .container {
   height: auto;
   width: 100%;
