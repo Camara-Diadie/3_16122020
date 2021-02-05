@@ -347,6 +347,8 @@ section#localisation-rest .explore-rest .btn {
   color: white;
   font-size: 20px;
   outline: #a8a8a838;
+  -webkit-box-shadow: 2px 2px 5px grey;
+          box-shadow: 2px 2px 5px grey;
 }
 
 section#localisation-rest .explore-rest .btn:hover {
